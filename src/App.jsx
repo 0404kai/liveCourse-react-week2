@@ -131,7 +131,7 @@ function App() {
               <h2>單一產品細節</h2>
               {tempProduct ? (
                 <div className="card mb-3">
-                  <img src={tempProduct.imageUrl} className="card-img-top primary-image" alt="主圖" />
+                  <img src={tempProduct.imageUrl} className="card-img-top primary-image object-fit-cover" height="300" alt="主圖" />
                   <div className="card-body">
                     <h5 className="card-title">
                       {tempProduct.title}
@@ -148,7 +148,7 @@ function App() {
                     <h5 className="mt-3">更多圖片：</h5>
                     <div className="row row-cols-2 g-2">
                       {tempProduct.imagesUrl?.map((url, index) => (
-                        <img key={index} src={url} className="images object-fit-cover" alt="副圖" />
+                        <img key={index} src={url} className="images object-fit-cover" height="200" alt="副圖" />
                       ))}
                     </div>
                   </div>
